@@ -2,7 +2,7 @@
 //Question 1:
 clc;
 clear;
-file = readxls("C:\Users\admin1\Desktop\Kanisshka_046_DM\Pract_3.xls");
+file = readxls("C:\Users\admin1\Desktop\Satyam_058_DM\Pract_3.xls");
 sheet = file(1);
 user = sheet.text(3:17, 3);
 fren = sheet.text(3:17, 4);
