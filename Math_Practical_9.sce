@@ -28,3 +28,26 @@ if(LHS==RHS)
 else
     disp("Pascal identity is NOT verified");
 end
+
+//Question no:4
+function c=combo(n,r)
+    c=factorial(n)/(factorial(n-r)*factorial(r));
+endfunction
+
+m=9;
+n=8;
+r=6;
+
+LHS= comb(m+n,r);
+RHS= 0;
+
+for k=0:r
+    RHS = RHS+comb(m,k)*comb(n,r-k);
+end
+
+if(LHS==RHS)
+    disp("Vandermonde identity is verified");
+else
+    disp("Vandermonde identity is NOT verified");
+end
+
