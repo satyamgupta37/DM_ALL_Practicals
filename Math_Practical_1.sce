@@ -1,4 +1,6 @@
+//Question no:1
 clc;
+close;
 s = readxls("C:\Users\admin1\Downloads\Shopping_Preference (1).xls");
 d = s(1);//file number of given excel sheet.
 data = d.value(10:159, 2:4);
@@ -6,17 +8,23 @@ c = data(:, 1);//All rows=":"
 l = data(:, 2);
 d = data(:, 3);
 disp(data);
+
+//Question no:2
 lb = c(l==1);
 pc = c(d==1);
 disp("People who bought Laptop");
 disp(lb);
 disp("People who bought Desktop");
 disp(pc);
+
+//Question no:3
 u = union(lb, pc);
 disp(u, "People who bought laptop or desktop");
 i = intersect(lb, pc);
 disp("People who purchased laptop and desktop");
 disp(i);
+
+//Question no:4
 only_l = setdiff(lb, pc);
 disp("People who only purchased laptop");
 disp(only_l);
@@ -24,6 +32,7 @@ only_d = setdiff(pc, lb);
 disp("People who only purchased desktop");
 disp(only_d);
 
+//Question no:5
 //No Laptop
 no_l = setdiff(c, lb);
 disp(no_l,"People who did not buy laptop");
@@ -32,6 +41,7 @@ disp(no_l,"People who did not buy laptop");
 no_d = setdiff(c, pc);
 disp(no_d,"People who did not buy Desktop");
 
+//Question no:6
 //Verify De Morgan's Laws:
 LHS_1 = setdiff(c,u);
 disp("LHS_1",length(LHS_1'));
