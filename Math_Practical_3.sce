@@ -1,4 +1,4 @@
-//Question 1:
+//Question no:1
 clc;
 clear;
 file = readxls("C:\Users\admin1\Desktop\Satyam_058_DM\Pract_3.xls");
@@ -8,7 +8,7 @@ fren = sheet.text(3:17, 4);
 disp("Social connections are:");
 disp([user fren]);
 
-//Question 2: Self Connections.
+//Question no:2 Self Connections.
 count = size(user,"*");
 disp("Self-Connections are: ")
 for i = 1:count
@@ -17,8 +17,8 @@ for i = 1:count
     end
 end
 
-//Question 3:
-disp("Mutual Connections areL:")
+//Question no:3
+disp("Mutual Connections are:")
 for i=1:count
     for j=i+1:count
         if user(i)==fren(j) & fren(i) == user(j) & user(i)<>fren(i) then
@@ -27,7 +27,7 @@ for i=1:count
     end
 end
 
-//Question 4:
+//Question no:4
 disp("Suggested friend connections:");
 for i=1:count
     first = user(i);
