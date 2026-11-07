@@ -1,5 +1,4 @@
-//Priactical 3
-//Question 1:
+//Question 1:
 clc;
 clear;
 file = readxls("C:\Users\admin1\Desktop\Satyam_058_DM\Pract_3.xls");
